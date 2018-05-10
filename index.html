@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px';
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+>>>>>>> tab切换
+</head>
+
+<body>
+    <div class="box">
+<<<<<<< HEAD
+        <header>
+            <span><</span>
+            <h3>我的</h3>
+        </header>
+        <section>
+            <nav>
+                <em></em>
+                <h4>请点击登录您的小米账号</h4>
+            </nav>
+            <ul>
+                <li>
+                    <em></em>
+                    <p>
+                        <span>播放历史</span>
+                        <strong>></strong>
+                    </p>
+                </li>
+                <li>
+                    <em></em>
+                    <p>
+                        <span>我的收藏</span>
+                        <strong>></strong>
+                    </p>
+                </li>
+                <li>
+                    <em>√</em>
+                    <p>
+                        <span>已安装应用</span>
+                        <strong>></strong>
+                    </p>
+                </li>
+                <li>
+                    <em></em>
+                    <p>
+                        <span>设置</span>
+                        <strong>></strong>
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </div>
+=======
+        <header>无连接</header>
+        <nav>
+            <ul>
+                <li class="show">
+                    <i class="icon iconfont icon-set"></i>
+                    <span>电源</span>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-shouye"></i>
+                    <span>首页</span>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-05"></i>
+                    <span>菜单</span>
+                </li>
+                <li>
+                    <i class="icon iconfont icon-fenxiang3"></i>
+                    <span>截屏</span>
+                </li>
+            </ul>
+        </nav>
+        <main class="swiper-container main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">电源</div>
+                <div class="swiper-slide">首页</div>
+                <div class="swiper-slide">菜单</div>
+                <div class="swiper-slide">截屏</div>
+            </div>
+        </main>
+    </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var mySwiper = new Swiper('.main', {
+                on: {
+                    slideChangeTransitionStart: function() {
+                        var index = this.activeIndex;
+                        var lis = $('nav ul li').eq(index);
+                        lis.toggleClass('show').siblings().removeClass('show');
+                    }
+                }
+            });
+            $('nav ul li').on('click', function() {
+                var index = $(this).index();
+                mySwiper.slideTo(index);
+            })
+        })
+    </script>
+>>>>>>> tab切换
+</body>
+
+</html>
